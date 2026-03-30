@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MatheFit — Mathe-Abi-Coaching | Eric Garcia</title>
-<meta name="description" content="Ganzjähriges Mathe-Coaching für Klasse 11 & 12. Feste 5er-Gruppen, KI-Übungsplattform, systematische Abi-Vorbereitung. Für motivierte Schüler und weitsichtige Eltern.">
+<meta name="description" content="Ganzjähriges Mathe-Coaching für Klasse 11 & 12. Feste 5er-Gruppen, Live-Coaching per Zoom, systematische Abi-Vorbereitung. Für motivierte Schüler und weitsichtige Eltern.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -159,8 +159,8 @@ section{padding:6rem 2rem}
 .wa-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .wa-qr-wrap{background:var(--paper);border:2px solid var(--border);border-radius:24px;padding:2.5rem;text-align:center}
 .wa-qr-box{display:inline-block;padding:1rem;background:white;border-radius:16px;margin-bottom:1rem;box-shadow:var(--shadow-sm)}
-#qrcode{display:inline-block}
-#qrcode canvas{border-radius:8px}
+#qrcode-abi,#qrcode-blf{display:inline-block}
+#qrcode-abi canvas,#qrcode-blf canvas{border-radius:8px}
 .wa-qr-label{font-size:.85rem;color:var(--muted);font-weight:500}
 
 /* FAQ */
@@ -237,7 +237,7 @@ footer a:hover{color:rgba(255,255,255,0.8)}
   .hero-visual{max-width:450px;margin:0 auto}
   .hero-float{display:none}
   .steps-grid,.features-grid,.pricing-cards,.stats-inner{grid-template-columns:1fr}
-  .pricing-cards{max-width:450px}
+  .pricing-cards{max-width:100%;grid-template-columns:1fr!important}
   .about-photo-wrap{max-width:300px;margin:0 auto}
   .about-highlights{grid-template-columns:1fr}
   .about-credential{right:0}
@@ -258,7 +258,6 @@ footer a:hover{color:rgba(255,255,255,0.8)}
     <li><a href="#how" data-de="So funktioniert's" data-en="How It Works">So funktioniert's</a></li>
     <li><a href="#pricing" data-de="Preise" data-en="Pricing">Preise</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="practice.html" style="color:var(--accent);font-weight:600" data-de="🚀 Übungsplattform" data-en="🚀 Practice">🚀 Übungsplattform</a></li>
     <li><div class="lang-toggle"><button class="lang-btn active" onclick="setLang('de')">DE</button><button class="lang-btn" onclick="setLang('en')">EN</button></div></li>
     <li><a href="https://chat.whatsapp.com/ItIDGzqHgqV73OhZIijhxK?mode=gi_t" target="_blank" class="btn btn-primary" style="padding:.6rem 1.2rem;font-size:.85rem" data-de="Kostenlos testen" data-en="Free Trial">Kostenlos testen</a></li>
   </ul>
@@ -269,9 +268,9 @@ footer a:hover{color:rgba(255,255,255,0.8)}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge" data-de="📐 Ganzjähriges Mathe-Programm ab Klasse 11" data-en="📐 Year-round math program from grade 11">📐 Ganzjähriges Mathe-Programm ab Klasse 11</div>
+      <div class="hero-badge" data-de="📐 Ganzjähriges Mathe-Programm ab Klasse 10" data-en="📐 Year-round math program from grade 10">📐 Ganzjähriges Mathe-Programm ab Klasse 10</div>
       <h1 class="display" data-de="Mathe-Oberstufe <em>von Anfang an</em> im Griff." data-en="Master upper-level math <em>from day one</em>.">Mathe-Oberstufe <em>von Anfang an</em> im Griff.</h1>
-      <p class="hero-sub" data-de="Ganzjähriges Gruppencoaching für Klasse 11 & 12 — nicht Nachhilfe, sondern systematische Vorarbeit. Mit KI-Übungsplattform zwischen den Sitzungen. Für Schüler und Eltern, die früh investieren statt spät retten." data-en="Year-round group coaching for grades 11 & 12 — not tutoring, but systematic preparation. With AI practice platform between sessions. For students and parents who invest early instead of cramming late.">Ganzjähriges Gruppencoaching für Klasse 11 & 12 — nicht Nachhilfe, sondern systematische Vorarbeit. Mit KI-Übungsplattform zwischen den Sitzungen. Für Schüler und Eltern, die früh investieren statt spät retten.</p>
+      <p class="hero-sub" data-de="Ganzjähriges Mathe-Coaching für Klasse 10, 11 & 12 — nicht Nachhilfe, sondern systematische Vorarbeit. Feste 5er-Gruppen per Zoom, WhatsApp-Support zwischen den Sitzungen. Für Schüler und Eltern, die früh investieren statt spät retten." data-en="Year-round math coaching for grades 10, 11 & 12 — not tutoring, but systematic preparation. Fixed groups of 5 via Zoom, WhatsApp support between sessions. For students and parents who invest early instead of cramming late.">Ganzjähriges Mathe-Coaching für Klasse 10, 11 & 12 — nicht Nachhilfe, sondern systematische Vorarbeit. Feste 5er-Gruppen per Zoom, WhatsApp-Support zwischen den Sitzungen. Für Schüler und Eltern, die früh investieren statt spät retten.</p>
       <div class="hero-ctas">
         <a href="https://chat.whatsapp.com/ItIDGzqHgqV73OhZIijhxK?mode=gi_t" target="_blank" class="btn btn-whatsapp" data-de="💬 WhatsApp-Gruppe beitreten" data-en="💬 Join WhatsApp Group">💬 WhatsApp-Gruppe beitreten</a>
         <a href="#about" class="btn btn-secondary" data-de="Mehr erfahren" data-en="Learn More">Mehr erfahren</a>
@@ -337,7 +336,7 @@ footer a:hover{color:rgba(255,255,255,0.8)}
   <div class="steps-grid">
     <div class="step reveal"><div class="step-number">01</div><div class="step-icon">🎯</div><h3 data-de="Diagnose deiner Lücken" data-en="Diagnose Your Gaps">Diagnose deiner Lücken</h3><p data-de="In einer kostenlosen Probestunde analysieren wir, wo du stehst — und erstellen einen langfristigen Lernplan, der dich systematisch aufs Abi vorbereitet." data-en="In a free trial session, we analyze where you stand — and create a long-term learning plan that systematically prepares you for the Abitur.">In einer kostenlosen Probestunde analysieren wir, wo du stehst — und erstellen einen langfristigen Lernplan, der dich systematisch aufs Abi vorbereitet.</p></div>
     <div class="step reveal"><div class="step-number">02</div><div class="step-icon">👥</div><h3 data-de="Live-Gruppencoaching" data-en="Live Group Coaching">Live-Gruppencoaching</h3><p data-de="Zweimal pro Woche triffst du dich mit deiner Lerngruppe per Zoom. Feste 5er-Gruppen — jeder bekommt Aufmerksamkeit, alle lernen voneinander." data-en="Twice a week you meet with your study group via Zoom. Fixed groups of 5 — everyone gets attention, and you learn from each other.">Zweimal pro Woche triffst du dich mit deiner Lerngruppe per Zoom. Feste 5er-Gruppen — jeder bekommt Aufmerksamkeit, alle lernen voneinander.</p></div>
-    <div class="step reveal"><div class="step-number">03</div><div class="step-icon">🤖</div><h3 data-de="KI-Übungsplattform" data-en="AI Practice Platform">KI-Übungsplattform</h3><p data-de="Zwischen den Sitzungen übst du mit unserer KI, die sich deinem Niveau anpasst. So kommst du vorbereitet ins nächste Coaching." data-en="Between sessions you practice with our AI that adapts to your level. So you come prepared to the next coaching.">Zwischen den Sitzungen übst du mit unserer KI, die sich deinem Niveau anpasst. So kommst du vorbereitet ins nächste Coaching.</p></div>
+    <div class="step reveal"><div class="step-number">03</div><div class="step-icon">💬</div><h3 data-de="WhatsApp-Gruppe &amp; Zoom-Zugang" data-en="WhatsApp Group &amp; Zoom Access">WhatsApp-Gruppe &amp; Zoom-Zugang</h3><p data-de="Nach der Buchung erhältst du sofort deinen Zoom-Link, wählst deine Wunschtermine, und trittst der WhatsApp-Gruppe bei — für Fragen auch zwischen den Sitzungen." data-en="After booking you instantly receive your Zoom link, choose your preferred schedule, and join the WhatsApp group — for questions even between sessions.">Nach der Buchung erhältst du sofort deinen Zoom-Link, wählst deine Wunschtermine, und trittst der WhatsApp-Gruppe bei — für Fragen auch zwischen den Sitzungen.</p></div>
   </div>
 </div></section>
 
@@ -347,8 +346,8 @@ footer a:hover{color:rgba(255,255,255,0.8)}
   <h2 class="section-title display" data-de="Kein Nachhilfe-Modell" data-en="Not a tutoring model">Kein Nachhilfe-Modell</h2>
   <p class="section-sub" data-de="Ein ganzjähriges Programm für Schüler, die sich frühzeitig einen echten Vorsprung erarbeiten wollen — nicht erst wenn es brennt." data-en="A year-round program for students who want to build a real advantage early — not just when panic sets in.">Ein ganzjähriges Programm für Schüler, die sich frühzeitig einen echten Vorsprung erarbeiten wollen — nicht erst wenn es brennt.</p>
   <div class="features-grid">
-    <div class="feature reveal"><div class="feature-icon" style="background:#eef2ff">🧠</div><div><h3 data-de="Personalisiertes KI-Training" data-en="Personalized AI Training">Personalisiertes KI-Training</h3><p data-de="Unsere KI erkennt deine Schwachstellen und erstellt Aufgaben genau auf deinem Niveau." data-en="Our AI identifies your weak spots and creates problems exactly at your level.">Unsere KI erkennt deine Schwachstellen und erstellt Aufgaben genau auf deinem Niveau.</p></div></div>
-    <div class="feature reveal"><div class="feature-icon" style="background:#fef3c7">📈</div><div><h3 data-de="Fortschritts-Dashboard" data-en="Progress Dashboard">Fortschritts-Dashboard</h3><p data-de="Du und deine Eltern sehen in Echtzeit, wo du stehst — Transparenz statt Bauchgefühl." data-en="You and your parents see in real-time where you stand — transparency instead of guesswork.">Du und deine Eltern sehen in Echtzeit, wo du stehst — Transparenz statt Bauchgefühl.</p></div></div>
+    <div class="feature reveal"><div class="feature-icon" style="background:#eef2ff">📹</div><div><h3 data-de="Live per Zoom" data-en="Live via Zoom">Live per Zoom</h3><p data-de="Alle Sitzungen finden live per Zoom statt — kamerafrei, fokussiert, interaktiv. Du kannst jederzeit Fragen stellen." data-en="All sessions are live via Zoom — camera-free, focused, interactive. You can ask questions anytime.">Alle Sitzungen finden live per Zoom statt — kamerafrei, fokussiert, interaktiv. Du kannst jederzeit Fragen stellen.</p></div></div>
+    <div class="feature reveal"><div class="feature-icon" style="background:#fef3c7">💬</div><div><h3 data-de="WhatsApp-Support" data-en="WhatsApp Support">WhatsApp-Support</h3><p data-de="Zwischen den Sitzungen hast du Zugang zur WhatsApp-Gruppe. Schnelle Fragen, Übungsmaterial, direkte Kommunikation." data-en="Between sessions you have access to the WhatsApp group. Quick questions, practice material, direct communication.">Zwischen den Sitzungen hast du Zugang zur WhatsApp-Gruppe. Schnelle Fragen, Übungsmaterial, direkte Kommunikation.</p></div></div>
     <div class="feature reveal"><div class="feature-icon" style="background:#fce4ec">👥</div><div><h3 data-de="Kleine Lerngruppen" data-en="Small Study Groups">Kleine Lerngruppen</h3><p data-de="Feste 5er-Gruppen mit Schülern auf dem gleichen Niveau und dem gleichen Ziel: ein starkes Mathe-Abi." data-en="Fixed groups of 5 students at the same level with the same goal: a strong math Abitur.">Feste 5er-Gruppen mit Schülern auf dem gleichen Niveau und dem gleichen Ziel: ein starkes Mathe-Abi.</p></div></div>
     <div class="feature reveal"><div class="feature-icon" style="background:#e8f5ee">🎓</div><div><h3 data-de="Abi-fokussiert" data-en="Abitur-Focused">Abi-fokussiert</h3><p data-de="Analysis, Analytische Geometrie, Stochastik — wir trainieren mit echten Abi-Aufgaben." data-en="Analysis, Analytic Geometry, Stochastics — we train with real Abitur problems.">Analysis, Analytische Geometrie, Stochastik — wir trainieren mit echten Abi-Aufgaben.</p></div></div>
   </div>
@@ -359,37 +358,52 @@ footer a:hover{color:rgba(255,255,255,0.8)}
   <span class="section-label" data-de="Preise" data-en="Pricing">Preise</span>
   <h2 class="section-title display" style="color:white" data-de="Früh investieren, später ernten" data-en="Invest early, reap later">Früh investieren, später ernten</h2>
   <p class="section-sub" data-de="Ganzjährig buchbar. Klare Preise. Keine versteckten Kosten. Jederzeit kündbar." data-en="Available year-round. Clear pricing. No hidden costs. Cancel anytime.">Ganzjährig buchbar. Klare Preise. Keine versteckten Kosten. Jederzeit kündbar.</p>
-  <div class="pricing-cards">
+  <div class="pricing-cards" style="grid-template-columns:repeat(3,1fr)">
     <div class="pricing-card main">
+      <div class="pricing-name" data-de="BLF-Coaching" data-en="BLF Coaching">BLF-Coaching</div>
+      <div class="pricing-price">160€ <span data-de="/ Monat" data-en="/ month">/ Monat</span></div>
+      <div class="pricing-desc" data-de="Gezielte Vorbereitung auf die Besondere Leistungsfeststellung in Klasse 10." data-en="Targeted preparation for the BLF exam in grade 10.">Gezielte Vorbereitung auf die Besondere Leistungsfeststellung in Klasse 10.</div>
+      <ul class="pricing-features">
+        <li data-de="2× Live-Coaching pro Woche per Zoom" data-en="2× live coaching per week via Zoom">2× Live-Coaching pro Woche per Zoom</li>
+        <li data-de="Feste 5er-Lerngruppen" data-en="Fixed groups of 5 students">Feste 5er-Lerngruppen</li>
+        <li data-de="WhatsApp-Gruppe für Fragen" data-en="WhatsApp group for questions">WhatsApp-Gruppe für Fragen</li>
+        <li data-de="Terminauswahl bei der Buchung" data-en="Choose your schedule when booking">Terminauswahl bei der Buchung</li>
+        <li data-de="Ganzjährig verfügbar" data-en="Available year-round">Ganzjährig verfügbar</li>
+      </ul>
+      <button onclick="openCheckout('blf-coaching')" class="btn btn-outline" data-de="Jetzt buchen →" data-en="Subscribe Now →">Jetzt buchen →</button>
+      <p class="pricing-per" data-de="≈ 20€ pro Stunde · Klasse 10" data-en="≈ €20/hour · Grade 10">≈ 20€ pro Stunde · Klasse 10</p>
+      <div class="payment-methods"><span class="payment-icon">💳 Karte</span><span class="payment-icon">SEPA</span><span class="payment-icon">Apple Pay</span></div>
+    </div>
+    <div class="pricing-card highlight">
+      <div class="pricing-tag" data-de="Beliebt" data-en="Popular">Beliebt</div>
       <div class="pricing-name" data-de="Abi-Coaching" data-en="Abi Coaching">Abi-Coaching</div>
       <div class="pricing-price">160€ <span data-de="/ Monat" data-en="/ month">/ Monat</span></div>
       <div class="pricing-desc" data-de="Ganzjähriges Coaching — von Klasse 11 bis zum Abi." data-en="Year-round coaching — from grade 11 to the Abitur.">Ganzjähriges Coaching — von Klasse 11 bis zum Abi.</div>
       <ul class="pricing-features">
-        <li data-de="2× Live-Gruppencoaching pro Woche" data-en="2× live group coaching per week">2× Live-Gruppencoaching pro Woche</li>
-        <li data-de="Zugang zur KI-Übungsplattform" data-en="Access to AI practice platform">Zugang zur KI-Übungsplattform</li>
-        <li data-de="Fortschritts-Dashboard für Eltern" data-en="Progress dashboard for parents">Fortschritts-Dashboard für Eltern</li>
-        <li data-de="Chat-Support für schnelle Fragen" data-en="Chat support for quick questions">Chat-Support für schnelle Fragen</li>
+        <li data-de="2× Live-Coaching pro Woche per Zoom" data-en="2× live coaching per week via Zoom">2× Live-Coaching pro Woche per Zoom</li>
         <li data-de="Feste 5er-Lerngruppen" data-en="Fixed groups of 5 students">Feste 5er-Lerngruppen</li>
+        <li data-de="WhatsApp-Gruppe für Fragen" data-en="WhatsApp group for questions">WhatsApp-Gruppe für Fragen</li>
+        <li data-de="Terminauswahl bei der Buchung" data-en="Choose your schedule when booking">Terminauswahl bei der Buchung</li>
+        <li data-de="Ganzjährig verfügbar" data-en="Available year-round">Ganzjährig verfügbar</li>
       </ul>
-      <button onclick="openCheckout('abi-coaching')" class="btn btn-outline" data-de="Jetzt buchen →" data-en="Subscribe Now →">Jetzt buchen →</button>
-      <p class="pricing-per" data-de="≈ 20€ pro Coaching-Sitzung" data-en="≈ €20 per coaching session">≈ 20€ pro Coaching-Sitzung</p>
+      <button onclick="openCheckout('abi-coaching')" class="btn btn-white" data-de="Jetzt buchen →" data-en="Subscribe Now →">Jetzt buchen →</button>
+      <p class="pricing-per" style="color:rgba(255,255,255,0.4)" data-de="≈ 20€ pro Stunde · Klasse 11 & 12" data-en="≈ €20/hour · Grades 11 & 12">≈ 20€ pro Stunde · Klasse 11 & 12</p>
       <div class="payment-methods"><span class="payment-icon">💳 Karte</span><span class="payment-icon">SEPA</span><span class="payment-icon">Apple Pay</span></div>
     </div>
-    <div class="pricing-card highlight">
-      <div class="pricing-tag" data-de="Intensiv" data-en="Intensive">Intensiv</div>
+    <div class="pricing-card main">
+      <div class="pricing-tag" data-de="Intensiv" data-en="Intensive" style="background:var(--warm)">Intensiv</div>
       <div class="pricing-name" data-de="Abi-Sprint" data-en="Abi Sprint">Abi-Sprint</div>
       <div class="pricing-price">400€ <span data-de="einmalig" data-en="one-time">einmalig</span></div>
       <div class="pricing-desc" data-de="4-Wochen Crashkurs vor dem Abitur." data-en="4-week crash course before the Abitur.">4-Wochen Crashkurs vor dem Abitur.</div>
       <ul class="pricing-features">
-        <li data-de="5× Intensiv-Sessions pro Woche (5er-Gruppen)" data-en="5× intensive sessions per week (groups of 5)">5× Intensiv-Sessions pro Woche (5er-Gruppen)</li>
+        <li data-de="5× Intensiv-Sessions pro Woche per Zoom" data-en="5× intensive sessions per week via Zoom">5× Intensiv-Sessions pro Woche per Zoom</li>
         <li data-de="Feste 5er-Lerngruppen" data-en="Fixed groups of 5 students">Feste 5er-Lerngruppen</li>
         <li data-de="Fokus auf Prüfungsstrategie" data-en="Focus on exam strategy">Fokus auf Prüfungsstrategie</li>
         <li data-de="Echte Abi-Aufgaben unter Zeitdruck" data-en="Real Abitur problems under time pressure">Echte Abi-Aufgaben unter Zeitdruck</li>
-        <li data-de="Persönlicher Lernplan" data-en="Personal study plan">Persönlicher Lernplan</li>
         <li data-de="WhatsApp-Support bis zum Abi-Tag" data-en="WhatsApp support until exam day">WhatsApp-Support bis zum Abi-Tag</li>
       </ul>
-      <button onclick="openCheckout('abi-sprint')" class="btn btn-white" data-de="Platz sichern →" data-en="Reserve Spot →">Platz sichern →</button>
-      <p class="pricing-per" style="color:rgba(255,255,255,0.4)" data-de="≈ 20€ pro Intensiv-Sitzung" data-en="≈ €20 per intensive session">≈ 20€ pro Intensiv-Sitzung</p>
+      <button onclick="openCheckout('abi-sprint')" class="btn btn-outline" data-de="Platz sichern →" data-en="Reserve Spot →">Platz sichern →</button>
+      <p class="pricing-per" data-de="≈ 20€ pro Stunde · Klasse 12" data-en="≈ €20/hour · Grade 12">≈ 20€ pro Stunde · Klasse 12</p>
       <div class="payment-methods"><span class="payment-icon">💳 Karte</span><span class="payment-icon">SEPA</span><span class="payment-icon">Apple Pay</span></div>
     </div>
   </div>
@@ -399,15 +413,21 @@ footer a:hover{color:rgba(255,255,255,0.8)}
 <section class="wa-section" id="whatsapp"><div class="container"><div class="wa-grid">
   <div class="reveal">
     <span class="section-label" data-de="Jetzt starten" data-en="Get Started">Jetzt starten</span>
-    <h2 class="section-title display" data-de="Tritt der WhatsApp-Gruppe bei" data-en="Join the WhatsApp Group">Tritt der WhatsApp-Gruppe bei</h2>
+    <h2 class="section-title display" data-de="Wähle deine Gruppe" data-en="Choose Your Group">Wähle deine Gruppe</h2>
     <p class="section-sub" data-de="Scanne den QR-Code oder klick auf den Link — und du bist dabei. Dort bekommst du alle Infos, Termine und kannst direkt Fragen stellen." data-en="Scan the QR code or click the link — and you're in. There you'll get all info, schedules, and can ask questions directly.">Scanne den QR-Code oder klick auf den Link — und du bist dabei. Dort bekommst du alle Infos, Termine und kannst direkt Fragen stellen.</p>
-    <a href="https://chat.whatsapp.com/ItIDGzqHgqV73OhZIijhxK?mode=gi_t" target="_blank" class="btn btn-whatsapp" data-de="💬 WhatsApp-Gruppe beitreten" data-en="💬 Join WhatsApp Group">💬 WhatsApp-Gruppe beitreten</a>
-    <div class="contact-row" style="justify-content:flex-start;margin-top:1.5rem">
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <a href="https://chat.whatsapp.com/ItIDGzqHgqV73OhZIijhxK?mode=gi_t" target="_blank" class="btn btn-whatsapp" data-de="💬 Abi-Gruppe (Kl. 11 & 12)" data-en="💬 Abi Group (Gr. 11 & 12)">💬 Abi-Gruppe (Kl. 11 & 12)</a>
+      <a href="https://chat.whatsapp.com/H0CXMw966462xRrdhbT8WN?mode=gi_t" target="_blank" class="btn btn-whatsapp" style="background:#128C7E" data-de="💬 BLF-Gruppe (Kl. 10)" data-en="💬 BLF Group (Gr. 10)">💬 BLF-Gruppe (Kl. 10)</a>
+    </div>
+    <div class="contact-row" style="justify-content:flex-start">
       <a href="tel:+491742091951" class="contact-chip">📞 +49 174 2091951</a>
       <a href="mailto:ericgkonto@gmail.com" class="contact-chip">✉️ ericgkonto@gmail.com</a>
     </div>
   </div>
-  <div class="wa-qr-wrap reveal"><div class="wa-qr-box"><div id="qrcode"></div></div><p class="wa-qr-label" data-de="QR-Code scannen für WhatsApp-Gruppe" data-en="Scan QR code for WhatsApp group">QR-Code scannen für WhatsApp-Gruppe</p></div>
+  <div class="reveal" style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:start">
+    <div class="wa-qr-wrap"><div class="wa-qr-box"><div id="qrcode-abi"></div></div><p class="wa-qr-label" data-de="Abi-Gruppe · Kl. 11 & 12" data-en="Abi Group · Gr. 11 & 12">Abi-Gruppe · Kl. 11 & 12</p></div>
+    <div class="wa-qr-wrap"><div class="wa-qr-box"><div id="qrcode-blf"></div></div><p class="wa-qr-label" data-de="BLF-Gruppe · Kl. 10" data-en="BLF Group · Gr. 10">BLF-Gruppe · Kl. 10</p></div>
+  </div>
 </div></div></section>
 
 <!-- FAQ -->
@@ -482,9 +502,9 @@ footer a:hover{color:rgba(255,255,255,0.8)}
 <script>
 // ===== LEGAL CONTENT (embedded) =====
 const LEGAL = {
-agb: `<h1>Allgemeine Geschäftsbedingungen (AGB)</h1><p class="legal-updated">Stand: März 2026</p><h2>§ 1 Geltungsbereich</h2><p>Diese AGB gelten für alle Verträge zwischen Eric Garcia, Reichenbachstraße 65D, 01217 Dresden (Anbieter) und dem Kunden über die Nutzung der Online-Coaching-Dienstleistungen unter der Marke „MatheFit".</p><h2>§ 2 Vertragsgegenstand</h2><p>Der Anbieter erbringt folgende Leistungen:</p><ol><li><strong>Abi-Coaching (Abonnement):</strong> Monatliches Gruppencoaching mit 2 Live-Sitzungen pro Woche per Zoom, Zugang zur KI-Übungsplattform, Fortschritts-Dashboard und Chat-Support. 5 Teilnehmer pro Gruppe (feste Gruppengröße).</li><li><strong>Abi-Sprint (Einmalzahlung):</strong> 4-wöchiger Intensivkurs mit 5 Sitzungen pro Woche in festen 5er-Gruppen, persönlichem Lernplan und WhatsApp-Support bis zum Abitur.</li></ol><h2>§ 3 Vertragsschluss</h2><p>Der Vertrag kommt zustande, wenn der Kunde den Bestellvorgang über den Zahlungslink abschließt und die Zahlung erfolgreich verarbeitet wird. Der Kunde erhält eine Bestätigungs-E-Mail.</p><h2>§ 4 Preise und Zahlung</h2><ol><li>Abi-Coaching: 160,00 € pro Monat (inkl. USt., sofern anwendbar).</li><li>Abi-Sprint: 400,00 € einmalig (inkl. USt., sofern anwendbar).</li><li>Die Zahlung erfolgt über Stripe. Akzeptiert: Kreditkarte, SEPA-Lastschrift, Apple Pay, Google Pay.</li><li>Bei Abonnements wird der monatliche Betrag jeweils zum Jahrestag des Vertragsbeginns abgebucht.</li></ol><h2>§ 5 Laufzeit und Kündigung</h2><ol><li>Das Abi-Coaching-Abonnement hat eine Mindestlaufzeit von einem Monat und verlängert sich automatisch.</li><li>Die Kündigung ist jederzeit zum Ende des laufenden Abrechnungsmonats möglich per E-Mail an ericgkonto@gmail.com oder über das Stripe-Kundenportal.</li><li>Der Abi-Sprint endet automatisch nach 4 Wochen.</li></ol><h2>§ 6 Widerrufsrecht</h2><p>Es gelten die gesetzlichen Widerrufsrechte gemäß § 312g BGB. Siehe Widerrufsbelehrung.</p><h2>§ 7 Leistungserbringung</h2><ol><li>Live-Coaching-Sitzungen finden per Zoom statt.</li><li>Zugangsdaten zur KI-Übungsplattform werden per E-Mail zugestellt.</li><li>Bei Krankheit oder höherer Gewalt können Sitzungen verschoben werden.</li></ol><h2>§ 8 Pflichten des Teilnehmers</h2><ol><li>Zugangsdaten vertraulich behandeln.</li><li>Materialien nur für persönlichen Gebrauch.</li><li>Aufzeichnungen nur mit Zustimmung.</li></ol><h2>§ 9 Haftung</h2><ol><li>Unbeschränkte Haftung bei Vorsatz oder grober Fahrlässigkeit.</li><li>Bei leichter Fahrlässigkeit: Haftung auf vertragstypischen Schaden beschränkt.</li><li>Keine Garantie für bestimmte Prüfungsergebnisse.</li></ol><h2>§ 10 Schlussbestimmungen</h2><ol><li>Es gilt deutsches Recht. Gerichtsstand ist Dresden.</li><li>OS-Plattform: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></li></ol>`,
+agb: `<h1>Allgemeine Geschäftsbedingungen (AGB)</h1><p class="legal-updated">Stand: März 2026</p><h2>§ 1 Geltungsbereich</h2><p>Diese AGB gelten für alle Verträge zwischen Eric Garcia, Reichenbachstraße 65D, 01217 Dresden (Anbieter) und dem Kunden über die Nutzung der Online-Coaching-Dienstleistungen unter der Marke „MatheFit".</p><h2>§ 2 Vertragsgegenstand</h2><p>Der Anbieter erbringt folgende Leistungen:</p><ol><li><strong>Abi-Coaching (Abonnement):</strong> Monatliches Gruppencoaching mit 2 Live-Sitzungen pro Woche per Zoom, Zoom-Zugang und WhatsApp-Gruppensupport. 5 Teilnehmer pro Gruppe (feste Gruppengröße).</li><li><strong>Abi-Sprint (Einmalzahlung):</strong> 4-wöchiger Intensivkurs mit 5 Sitzungen pro Woche in festen 5er-Gruppen, persönlichem Lernplan und WhatsApp-Support bis zum Abitur.</li></ol><h2>§ 3 Vertragsschluss</h2><p>Der Vertrag kommt zustande, wenn der Kunde den Bestellvorgang über den Zahlungslink abschließt und die Zahlung erfolgreich verarbeitet wird. Der Kunde erhält eine Bestätigungs-E-Mail.</p><h2>§ 4 Preise und Zahlung</h2><ol><li>BLF-Coaching: 160,00 € pro Monat (inkl. USt., sofern anwendbar).</li><li>Abi-Coaching: 160,00 € pro Monat (inkl. USt., sofern anwendbar).</li><li>Abi-Sprint: 400,00 € einmalig (inkl. USt., sofern anwendbar).</li><li>Die Zahlung erfolgt über Stripe. Akzeptiert: Kreditkarte, SEPA-Lastschrift, Apple Pay, Google Pay.</li><li>Bei Abonnements wird der monatliche Betrag jeweils zum Jahrestag des Vertragsbeginns abgebucht.</li></ol><h2>§ 5 Laufzeit und Kündigung</h2><ol><li>Das Abi-Coaching-Abonnement hat eine Mindestlaufzeit von einem Monat und verlängert sich automatisch.</li><li>Die Kündigung ist jederzeit zum Ende des laufenden Abrechnungsmonats möglich per E-Mail an ericgkonto@gmail.com oder über das Stripe-Kundenportal.</li><li>Der Abi-Sprint endet automatisch nach 4 Wochen.</li></ol><h2>§ 6 Widerrufsrecht</h2><p>Es gelten die gesetzlichen Widerrufsrechte gemäß § 312g BGB. Siehe Widerrufsbelehrung.</p><h2>§ 7 Leistungserbringung</h2><ol><li>Live-Coaching-Sitzungen finden per Zoom statt.</li><li>Der Zoom-Link und WhatsApp-Gruppeneinladung werden nach Zahlungseingang per E-Mail zugestellt.</li><li>Bei Krankheit oder höherer Gewalt können Sitzungen verschoben werden.</li></ol><h2>§ 8 Pflichten des Teilnehmers</h2><ol><li>Zugangsdaten vertraulich behandeln.</li><li>Materialien nur für persönlichen Gebrauch.</li><li>Aufzeichnungen nur mit Zustimmung.</li></ol><h2>§ 9 Haftung</h2><ol><li>Unbeschränkte Haftung bei Vorsatz oder grober Fahrlässigkeit.</li><li>Bei leichter Fahrlässigkeit: Haftung auf vertragstypischen Schaden beschränkt.</li><li>Keine Garantie für bestimmte Prüfungsergebnisse.</li></ol><h2>§ 10 Schlussbestimmungen</h2><ol><li>Es gilt deutsches Recht. Gerichtsstand ist Dresden.</li><li>OS-Plattform: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></li></ol>`,
 
-datenschutz: `<h1>Datenschutzerklärung</h1><p class="legal-updated">Stand: März 2026</p><h2>1. Verantwortlicher</h2><p>Eric Garcia, Reichenbachstraße 65D, 01217 Dresden<br>E-Mail: ericgkonto@gmail.com | Tel: +49 174 2091951</p><h2>2. Welche Daten wir erheben</h2><p><strong>a) Website-Besuch:</strong> IP-Adresse, Zugriffszeit, Browser (Hosting durch Netlify, Art. 6 Abs. 1 lit. f DSGVO).</p><p><strong>b) Kontaktaufnahme:</strong> Name, Telefon, E-Mail, Nachrichteninhalt (Art. 6 Abs. 1 lit. b DSGVO).</p><p><strong>c) Buchung:</strong> Name, E-Mail, Zahlungsdaten (via Stripe), Klassenstufe (Art. 6 Abs. 1 lit. b DSGVO).</p><p><strong>d) Übungsplattform:</strong> Lernfortschritt, bearbeitete Aufgaben, Nutzungszeiten (Art. 6 Abs. 1 lit. b DSGVO).</p><h2>3. Zahlungsabwicklung</h2><p>Über Stripe, Inc. (PCI-DSS-zertifiziert). Wir speichern keine vollständigen Zahlungsdaten. <a href="https://stripe.com/de/privacy" target="_blank">Stripe Datenschutz</a></p><h2>4. WhatsApp</h2><p>Kommunikation über WhatsApp (Meta) auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p><h2>5. Zoom</h2><p>Live-Coaching über Zoom Video Communications. <a href="https://explore.zoom.us/de/privacy/" target="_blank">Zoom Datenschutz</a></p><h2>6. Hosting</h2><p>Netlify, Inc. (USA). Art. 6 Abs. 1 lit. f DSGVO.</p><h2>7. Ihre Rechte</h2><p>Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21), Widerruf (Art. 7 Abs. 3). Kontakt: ericgkonto@gmail.com</p><h2>8. Beschwerderecht</h2><p>Sächsischer Datenschutzbeauftragter: <a href="https://www.saechsdsb.de" target="_blank">www.saechsdsb.de</a></p><h2>9. Cookies</h2><p>Diese Website verwendet keine Tracking-Cookies und keine Analyse-Tools.</p>`,
+datenschutz: `<h1>Datenschutzerklärung</h1><p class="legal-updated">Stand: März 2026</p><h2>1. Verantwortlicher</h2><p>Eric Garcia, Reichenbachstraße 65D, 01217 Dresden<br>E-Mail: ericgkonto@gmail.com | Tel: +49 174 2091951</p><h2>2. Welche Daten wir erheben</h2><p><strong>a) Website-Besuch:</strong> IP-Adresse, Zugriffszeit, Browser (Hosting durch Netlify, Art. 6 Abs. 1 lit. f DSGVO).</p><p><strong>b) Kontaktaufnahme:</strong> Name, Telefon, E-Mail, Nachrichteninhalt (Art. 6 Abs. 1 lit. b DSGVO).</p><p><strong>c) Buchung:</strong> Name, E-Mail, Zahlungsdaten (via Stripe), Klassenstufe (Art. 6 Abs. 1 lit. b DSGVO).</p><h2>3. Zahlungsabwicklung</h2><p>Über Stripe, Inc. (PCI-DSS-zertifiziert). Wir speichern keine vollständigen Zahlungsdaten. <a href="https://stripe.com/de/privacy" target="_blank">Stripe Datenschutz</a></p><h2>4. WhatsApp</h2><p>Kommunikation über WhatsApp (Meta) auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p><h2>5. Zoom</h2><p>Live-Coaching über Zoom Video Communications. <a href="https://explore.zoom.us/de/privacy/" target="_blank">Zoom Datenschutz</a></p><h2>6. Hosting</h2><p>Netlify, Inc. (USA). Art. 6 Abs. 1 lit. f DSGVO.</p><h2>7. Ihre Rechte</h2><p>Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21), Widerruf (Art. 7 Abs. 3). Kontakt: ericgkonto@gmail.com</p><h2>8. Beschwerderecht</h2><p>Sächsischer Datenschutzbeauftragter: <a href="https://www.saechsdsb.de" target="_blank">www.saechsdsb.de</a></p><h2>9. Cookies</h2><p>Diese Website verwendet keine Tracking-Cookies und keine Analyse-Tools.</p>`,
 
 widerruf: `<h1>Widerrufsbelehrung</h1><p class="legal-updated">Stand: März 2026</p><h2>Widerrufsrecht</h2><p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.</p><p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns mittels einer eindeutigen Erklärung (z.B. E-Mail) informieren:</p><p><strong>Eric Garcia<br>Reichenbachstraße 65D, 01217 Dresden<br>ericgkonto@gmail.com<br>+49 174 2091951</strong></p><h2>Folgen des Widerrufs</h2><p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen unverzüglich und spätestens binnen 14 Tagen zurückzuzahlen. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel.</p><p>Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, haben Sie uns einen angemessenen Betrag für die bereits erbrachten Leistungen zu zahlen.</p><h2>Muster-Widerrufsformular</h2><p style="background:#f8f6f1;padding:1.2rem;border-radius:12px;border:1px solid #d6d0c4"><em>An: Eric Garcia, Reichenbachstraße 65D, 01217 Dresden, ericgkonto@gmail.com</em><br><br>Hiermit widerrufe(n) ich/wir den abgeschlossenen Vertrag über folgende Dienstleistung: ___<br>Bestellt am: ___<br>Name: ___<br>Anschrift: ___<br>Datum: ___<br>Unterschrift (nur bei Brief): ___</p>`
 };
@@ -514,9 +534,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // ===== QR CODE =====
 window.addEventListener('DOMContentLoaded', function() {
   if (typeof QRCode !== 'undefined') {
-    new QRCode(document.getElementById('qrcode'), {
+    new QRCode(document.getElementById('qrcode-abi'), {
       text: 'https://chat.whatsapp.com/ItIDGzqHgqV73OhZIijhxK?mode=gi_t',
-      width: 200, height: 200, colorDark: '#0a0f1a', colorLight: '#ffffff',
+      width: 160, height: 160,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+    new QRCode(document.getElementById('qrcode-blf'), {
+      text: 'https://chat.whatsapp.com/H0CXMw966462xRrdhbT8WN?mode=gi_t',
+      width: 160, height: 160,
       correctLevel: QRCode.CorrectLevel.M
     });
   }
@@ -525,6 +550,7 @@ window.addEventListener('DOMContentLoaded', function() {
 // ===== CHECKOUT MODAL =====
 // Replace these with your actual Stripe Payment Links:
 const STRIPE_LINKS = {
+  'blf-coaching': 'https://buy.stripe.com/eVqaEX4Cw4Ibgi28nig7e04',
   'abi-coaching': 'https://buy.stripe.com/eVq6oH1qk2A30j49rmg7e02',
   'abi-sprint': 'https://buy.stripe.com/dRm9AT8SM4Ib5Dobzug7e03'
 };
@@ -536,8 +562,13 @@ function openCheckout(product) {
   const title = document.getElementById('modalTitle');
   const price = document.getElementById('modalPrice');
   const subRow = document.getElementById('consentSubRow');
-  if (product === 'abi-coaching') {
+  const subText = document.querySelector('#consentSubRow span');
+  if (product === 'blf-coaching') {
+    title.textContent = 'BLF-Coaching'; price.textContent = '160€ / Monat'; subRow.style.display = 'flex';
+    subText.innerHTML = 'Ich stimme zu, dass der Betrag von 160€ monatlich abgebucht wird, bis ich kündige.';
+  } else if (product === 'abi-coaching') {
     title.textContent = 'Abi-Coaching'; price.textContent = '160€ / Monat'; subRow.style.display = 'flex';
+    subText.innerHTML = 'Ich stimme zu, dass der Betrag von 160€ monatlich abgebucht wird, bis ich kündige.';
   } else {
     title.textContent = 'Abi-Sprint'; price.textContent = '400€ einmalig'; subRow.style.display = 'none';
   }
